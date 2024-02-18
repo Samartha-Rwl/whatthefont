@@ -1,0 +1,136 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* Resetting default styles and box model */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body
+{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #B51A3A;
+    gap: 80px;
+
+
+}
+
+.about_singer
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    color: #E4CDD3;
+
+}
+.singer {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.song_name
+{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.about_singer img
+{
+    height: 200px;
+    width: 200px;
+    border-radius: 25px;
+}
+
+.lyrics
+{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px 10px  ;
+    box-shadow: 
+    10px 10px 5px #5E081E,
+    -10px -10px 5px #E48397
+    ;
+    height: 80vh;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.verse
+{
+    font-family: 'Lato', sans-serif;
+}
+
+p{
+    color: #E4CDD3;
+  
+}
+
+.heart {
+    position: relative;
+    right: 55%;
+    z-index: -1;
+	width: 24px; 
+	height: 24px; 
+	background: red; 
+	clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+	transform: scale(3);
+    opacity: 0;
+}
+
+.top 
+{
+    position: absolute;
+    bottom: 90%;
+    left: 65%;
+    transform: translate(90%,65%) ;
+    z-index: -1;
+	width: 24px; 
+	height: 24px; 
+	background: red; 
+	clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+	transform: scale(3);
+    opacity: 0;
+}
+
+.lyrics:hover .heart,
+.lyrics:hover .top
+
+{
+    opacity: 1;
+    transform: scale(5);
+    transition: all 0.5s ease-in-out;
+
+}
+
+.lyrics:hover 
+{
+height: 90vh;    
+}
+
+.lyrics:hover p 
+{
+    margin: 10px;
+    letter-spacing: .2em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: .9em;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 1px 1px 1px #5E081E;
+}
